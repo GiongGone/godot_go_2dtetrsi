@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://b433kdai0dbay"]
+
+[ext_resource type="Script" path="res://teer.gd" id="1_rl4dc"]
+
+[node name="teer" type="Label"]
+offset_right = 48.0
+offset_bottom = 24.0
+script = ExtResource("1_rl4dc")
+metadata/_edit_group_ = true
+
+[node name="tau" type="Timer" parent="."]
+wait_time = 30.0
+
+[connection signal="timeout" from="tau" to="." method="_on_tau_timeout"]

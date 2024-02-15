@@ -1,0 +1,233 @@
+[gd_scene load_steps=44 format=3 uid="uid://chkwmmt1550vh"]
+
+[ext_resource type="Script" path="res://digital/score.gd" id="1_ft1hr"]
+[ext_resource type="Script" path="res://digital/6a.gd" id="1_rowpy"]
+[ext_resource type="Script" path="res://digital/6b.gd" id="2_b13sa"]
+[ext_resource type="Script" path="res://digital/6c.gd" id="3_61dfk"]
+[ext_resource type="Script" path="res://digital/6d.gd" id="4_4kc0n"]
+[ext_resource type="Script" path="res://digital/6e.gd" id="5_qvjtd"]
+[ext_resource type="Script" path="res://digital/6f.gd" id="6_ixunr"]
+[ext_resource type="Script" path="res://digital/6g.gd" id="7_evoww"]
+[ext_resource type="Script" path="res://digital/5a.gd" id="8_sfod5"]
+[ext_resource type="Script" path="res://digital/5b.gd" id="9_tk1by"]
+[ext_resource type="Script" path="res://digital/5c.gd" id="10_e5eww"]
+[ext_resource type="Script" path="res://digital/5d.gd" id="11_0io0s"]
+[ext_resource type="Script" path="res://digital/5e.gd" id="12_wisvj"]
+[ext_resource type="Script" path="res://digital/5f.gd" id="13_uln48"]
+[ext_resource type="Script" path="res://digital/5g.gd" id="14_icei0"]
+[ext_resource type="Script" path="res://digital/4a.gd" id="15_lxn0w"]
+[ext_resource type="Script" path="res://digital/4b.gd" id="16_ey8re"]
+[ext_resource type="Script" path="res://digital/4c.gd" id="17_b1v1v"]
+[ext_resource type="Script" path="res://digital/4d.gd" id="18_wpvd6"]
+[ext_resource type="Script" path="res://digital/4e.gd" id="19_qxyl1"]
+[ext_resource type="Script" path="res://digital/4f.gd" id="20_l5bh2"]
+[ext_resource type="Script" path="res://digital/4g.gd" id="21_ha6ua"]
+[ext_resource type="Script" path="res://digital/3a.gd" id="22_aylvj"]
+[ext_resource type="Script" path="res://digital/3b.gd" id="23_a37sx"]
+[ext_resource type="Script" path="res://digital/3c.gd" id="24_p5b7q"]
+[ext_resource type="Script" path="res://digital/3d.gd" id="25_6dp2e"]
+[ext_resource type="Script" path="res://digital/3e.gd" id="26_mx0tv"]
+[ext_resource type="Script" path="res://digital/3f.gd" id="27_p8tag"]
+[ext_resource type="Script" path="res://digital/3g.gd" id="28_660ay"]
+[ext_resource type="Script" path="res://digital/2a.gd" id="29_j3msi"]
+[ext_resource type="Script" path="res://digital/2b.gd" id="30_t07f3"]
+[ext_resource type="Script" path="res://digital/2c.gd" id="31_48hql"]
+[ext_resource type="Script" path="res://digital/2d.gd" id="32_r8deo"]
+[ext_resource type="Script" path="res://digital/2e.gd" id="33_pyheg"]
+[ext_resource type="Script" path="res://digital/2f.gd" id="34_skr8j"]
+[ext_resource type="Script" path="res://digital/2g.gd" id="35_8sabm"]
+[ext_resource type="Script" path="res://digital/1a.gd" id="36_krbis"]
+[ext_resource type="Script" path="res://digital/1b.gd" id="37_q4sg3"]
+[ext_resource type="Script" path="res://digital/1c.gd" id="38_ymo4s"]
+[ext_resource type="Script" path="res://digital/1d.gd" id="39_u3bgc"]
+[ext_resource type="Script" path="res://digital/1e.gd" id="40_v1gim"]
+[ext_resource type="Script" path="res://digital/1f.gd" id="41_sgtx4"]
+[ext_resource type="Script" path="res://digital/1g.gd" id="42_bsepd"]
+
+[node name="score" type="Node2D"]
+script = ExtResource("1_ft1hr")
+
+[node name="a6" type="Node2D" parent="."]
+
+[node name="sixa" type="Node2D" parent="a6"]
+visible = false
+script = ExtResource("1_rowpy")
+
+[node name="sixb" type="Node2D" parent="a6"]
+visible = false
+script = ExtResource("2_b13sa")
+
+[node name="sixc" type="Node2D" parent="a6"]
+visible = false
+script = ExtResource("3_61dfk")
+
+[node name="sixd" type="Node2D" parent="a6"]
+visible = false
+script = ExtResource("4_4kc0n")
+
+[node name="sixe" type="Node2D" parent="a6"]
+visible = false
+script = ExtResource("5_qvjtd")
+
+[node name="sixf" type="Node2D" parent="a6"]
+visible = false
+script = ExtResource("6_ixunr")
+
+[node name="sixg" type="Node2D" parent="a6"]
+visible = false
+script = ExtResource("7_evoww")
+
+[node name="b5" type="Node2D" parent="."]
+
+[node name="fivea" type="Node2D" parent="b5"]
+visible = false
+script = ExtResource("8_sfod5")
+
+[node name="fiveb" type="Node2D" parent="b5"]
+visible = false
+script = ExtResource("9_tk1by")
+
+[node name="fivec" type="Node2D" parent="b5"]
+visible = false
+script = ExtResource("10_e5eww")
+
+[node name="fived" type="Node2D" parent="b5"]
+visible = false
+script = ExtResource("11_0io0s")
+
+[node name="fivee" type="Node2D" parent="b5"]
+visible = false
+script = ExtResource("12_wisvj")
+
+[node name="fivef" type="Node2D" parent="b5"]
+visible = false
+script = ExtResource("13_uln48")
+
+[node name="fiveg" type="Node2D" parent="b5"]
+visible = false
+script = ExtResource("14_icei0")
+
+[node name="c4" type="Node2D" parent="."]
+
+[node name="foura" type="Node2D" parent="c4"]
+visible = false
+script = ExtResource("15_lxn0w")
+
+[node name="fourb" type="Node2D" parent="c4"]
+visible = false
+script = ExtResource("16_ey8re")
+
+[node name="fourc" type="Node2D" parent="c4"]
+visible = false
+script = ExtResource("17_b1v1v")
+
+[node name="fourd" type="Node2D" parent="c4"]
+visible = false
+script = ExtResource("18_wpvd6")
+
+[node name="foure" type="Node2D" parent="c4"]
+visible = false
+script = ExtResource("19_qxyl1")
+
+[node name="fourf" type="Node2D" parent="c4"]
+visible = false
+script = ExtResource("20_l5bh2")
+
+[node name="fourg" type="Node2D" parent="c4"]
+visible = false
+script = ExtResource("21_ha6ua")
+
+[node name="d3" type="Node2D" parent="."]
+
+[node name="threea" type="Node2D" parent="d3"]
+visible = false
+script = ExtResource("22_aylvj")
+
+[node name="threeb" type="Node2D" parent="d3"]
+visible = false
+script = ExtResource("23_a37sx")
+
+[node name="threec" type="Node2D" parent="d3"]
+visible = false
+script = ExtResource("24_p5b7q")
+
+[node name="threed" type="Node2D" parent="d3"]
+visible = false
+script = ExtResource("25_6dp2e")
+
+[node name="threee" type="Node2D" parent="d3"]
+visible = false
+script = ExtResource("26_mx0tv")
+
+[node name="threef" type="Node2D" parent="d3"]
+visible = false
+script = ExtResource("27_p8tag")
+
+[node name="threeg" type="Node2D" parent="d3"]
+visible = false
+script = ExtResource("28_660ay")
+
+[node name="e2" type="Node2D" parent="."]
+
+[node name="twoa" type="Node2D" parent="e2"]
+visible = false
+script = ExtResource("29_j3msi")
+
+[node name="twob" type="Node2D" parent="e2"]
+visible = false
+script = ExtResource("30_t07f3")
+
+[node name="twoc" type="Node2D" parent="e2"]
+visible = false
+script = ExtResource("31_48hql")
+
+[node name="twod" type="Node2D" parent="e2"]
+visible = false
+script = ExtResource("32_r8deo")
+
+[node name="twoe" type="Node2D" parent="e2"]
+visible = false
+script = ExtResource("33_pyheg")
+
+[node name="twof" type="Node2D" parent="e2"]
+visible = false
+script = ExtResource("34_skr8j")
+
+[node name="twog" type="Node2D" parent="e2"]
+visible = false
+script = ExtResource("35_8sabm")
+
+[node name="f1" type="Node2D" parent="."]
+
+[node name="onea" type="Node2D" parent="f1"]
+visible = false
+script = ExtResource("36_krbis")
+
+[node name="oneb" type="Node2D" parent="f1"]
+visible = false
+script = ExtResource("37_q4sg3")
+
+[node name="onec" type="Node2D" parent="f1"]
+visible = false
+script = ExtResource("38_ymo4s")
+
+[node name="oned" type="Node2D" parent="f1"]
+visible = false
+script = ExtResource("39_u3bgc")
+
+[node name="onee" type="Node2D" parent="f1"]
+visible = false
+script = ExtResource("40_v1gim")
+
+[node name="onef" type="Node2D" parent="f1"]
+visible = false
+script = ExtResource("41_sgtx4")
+
+[node name="oneg" type="Node2D" parent="f1"]
+visible = false
+script = ExtResource("42_bsepd")
+
+[node name="slip" type="Timer" parent="."]
+
+[node name="sli" type="Timer" parent="."]
+wait_time = 0.001

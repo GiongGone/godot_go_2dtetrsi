@@ -1,0 +1,857 @@
+[gd_scene load_steps=14 format=3 uid="uid://b21s5m2lv4w6t"]
+
+[ext_resource type="Script" path="res://screen.gd" id="1_ltxqv"]
+[ext_resource type="PackedScene" uid="uid://b433kdai0dbay" path="res://teer.tscn" id="2_ctk22"]
+[ext_resource type="PackedScene" uid="uid://du5sabevyon6m" path="res://block.tscn" id="3_u8nll"]
+[ext_resource type="PackedScene" uid="uid://chkwmmt1550vh" path="res://score.tscn" id="4_7of8q"]
+[ext_resource type="PackedScene" uid="uid://8ggahspnbira" path="res://pause.tscn" id="4_dpvc6"]
+[ext_resource type="PackedScene" uid="uid://c2pcrfa6q8imv" path="res://frec.tscn" id="4_olhkx"]
+[ext_resource type="PackedScene" uid="uid://dqx7l5hocnjpv" path="res://bad_signal.tscn" id="5_1mc1b"]
+[ext_resource type="PackedScene" uid="uid://tcfjs6rh6yew" path="res://hi_score.tscn" id="5_3lgx0"]
+[ext_resource type="PackedScene" uid="uid://b0nrtdlmxb4ou" path="res://quick.tscn" id="5_afpyf"]
+[ext_resource type="PackedScene" uid="uid://bynmnhp1u477y" path="res://control.tscn" id="5_sy4i0"]
+[ext_resource type="PackedScene" uid="uid://c4qm3bpsl4kmj" path="res://start.tscn" id="6_k3702"]
+[ext_resource type="PackedScene" uid="uid://i1mp3x0ahtin" path="res://sp_le.tscn" id="6_qabp0"]
+[ext_resource type="Texture2D" uid="uid://de8jtday2nubu" path="res://Picture1.png" id="13_x52ox"]
+
+[node name="screen" type="Node2D"]
+process_mode = 3
+script = ExtResource("1_ltxqv")
+z_block = ExtResource("3_u8nll")
+
+[node name="teer" parent="." instance=ExtResource("2_ctk22")]
+offset_left = 216.0
+offset_top = 48.0
+offset_right = 264.0
+offset_bottom = 72.0
+rotation = -1.5708
+
+[node name="score" parent="." instance=ExtResource("4_7of8q")]
+position = Vector2(165, 8)
+
+[node name="hi_score" parent="." instance=ExtResource("5_3lgx0")]
+position = Vector2(165, 32)
+
+[node name="control" parent="." instance=ExtResource("5_sy4i0")]
+position = Vector2(165, 128)
+
+[node name="sp_le" parent="." instance=ExtResource("6_qabp0")]
+position = Vector2(161, 147)
+
+[node name="quick" parent="." instance=ExtResource("5_afpyf")]
+position = Vector2(169, 214)
+
+[node name="pause" parent="." instance=ExtResource("4_dpvc6")]
+visible = false
+position = Vector2(200, 264)
+
+[node name="start" parent="." instance=ExtResource("6_k3702")]
+position = Vector2(165, 291)
+
+[node name="bad_signal" parent="." instance=ExtResource("5_1mc1b")]
+
+[node name="block" parent="bad_signal" instance=ExtResource("3_u8nll")]
+process_mode = 4
+visible = false
+position = Vector2(184, 72)
+
+[node name="block2" parent="bad_signal" instance=ExtResource("3_u8nll")]
+process_mode = 4
+visible = false
+position = Vector2(200, 72)
+
+[node name="block3" parent="bad_signal" instance=ExtResource("3_u8nll")]
+process_mode = 4
+visible = false
+position = Vector2(216, 72)
+
+[node name="block4" parent="bad_signal" instance=ExtResource("3_u8nll")]
+process_mode = 4
+visible = false
+position = Vector2(232, 72)
+
+[node name="block5" parent="bad_signal" instance=ExtResource("3_u8nll")]
+process_mode = 4
+visible = false
+position = Vector2(200, 88)
+
+[node name="block6" parent="bad_signal" instance=ExtResource("3_u8nll")]
+process_mode = 4
+visible = false
+position = Vector2(200, 104)
+
+[node name="block7" parent="bad_signal" instance=ExtResource("3_u8nll")]
+process_mode = 4
+visible = false
+position = Vector2(216, 88)
+
+[node name="block8" parent="bad_signal" instance=ExtResource("3_u8nll")]
+process_mode = 4
+visible = false
+position = Vector2(216, 104)
+
+[node name="fgroup" type="Node2D" parent="."]
+
+[node name="frec" parent="fgroup" instance=ExtResource("4_olhkx")]
+position = Vector2(8, 312)
+
+[node name="frec2" parent="fgroup" instance=ExtResource("4_olhkx")]
+position = Vector2(24, 312)
+
+[node name="frec3" parent="fgroup" instance=ExtResource("4_olhkx")]
+position = Vector2(40, 312)
+
+[node name="frec4" parent="fgroup" instance=ExtResource("4_olhkx")]
+position = Vector2(56, 312)
+
+[node name="frec5" parent="fgroup" instance=ExtResource("4_olhkx")]
+position = Vector2(72, 312)
+
+[node name="frec6" parent="fgroup" instance=ExtResource("4_olhkx")]
+position = Vector2(88, 312)
+
+[node name="frec7" parent="fgroup" instance=ExtResource("4_olhkx")]
+position = Vector2(104, 312)
+
+[node name="frec8" parent="fgroup" instance=ExtResource("4_olhkx")]
+position = Vector2(120, 312)
+
+[node name="frec9" parent="fgroup" instance=ExtResource("4_olhkx")]
+position = Vector2(136, 312)
+
+[node name="frec10" parent="fgroup" instance=ExtResource("4_olhkx")]
+position = Vector2(152, 312)
+
+[node name="fgroup2" type="Node2D" parent="."]
+
+[node name="frec11" parent="fgroup2" instance=ExtResource("4_olhkx")]
+position = Vector2(8, 296)
+
+[node name="frec12" parent="fgroup2" instance=ExtResource("4_olhkx")]
+position = Vector2(24, 296)
+
+[node name="frec13" parent="fgroup2" instance=ExtResource("4_olhkx")]
+position = Vector2(40, 296)
+
+[node name="frec14" parent="fgroup2" instance=ExtResource("4_olhkx")]
+position = Vector2(56, 296)
+
+[node name="frec15" parent="fgroup2" instance=ExtResource("4_olhkx")]
+position = Vector2(72, 296)
+
+[node name="frec16" parent="fgroup2" instance=ExtResource("4_olhkx")]
+position = Vector2(88, 296)
+
+[node name="frec17" parent="fgroup2" instance=ExtResource("4_olhkx")]
+position = Vector2(104, 296)
+
+[node name="frec18" parent="fgroup2" instance=ExtResource("4_olhkx")]
+position = Vector2(120, 296)
+
+[node name="frec19" parent="fgroup2" instance=ExtResource("4_olhkx")]
+position = Vector2(136, 296)
+
+[node name="frec20" parent="fgroup2" instance=ExtResource("4_olhkx")]
+position = Vector2(152, 296)
+
+[node name="fgroup3" type="Node2D" parent="."]
+
+[node name="frec21" parent="fgroup3" instance=ExtResource("4_olhkx")]
+position = Vector2(8, 280)
+
+[node name="frec22" parent="fgroup3" instance=ExtResource("4_olhkx")]
+position = Vector2(24, 280)
+
+[node name="frec23" parent="fgroup3" instance=ExtResource("4_olhkx")]
+position = Vector2(40, 280)
+
+[node name="frec24" parent="fgroup3" instance=ExtResource("4_olhkx")]
+position = Vector2(56, 280)
+
+[node name="frec25" parent="fgroup3" instance=ExtResource("4_olhkx")]
+position = Vector2(72, 280)
+
+[node name="frec26" parent="fgroup3" instance=ExtResource("4_olhkx")]
+position = Vector2(88, 280)
+
+[node name="frec27" parent="fgroup3" instance=ExtResource("4_olhkx")]
+position = Vector2(104, 280)
+
+[node name="frec28" parent="fgroup3" instance=ExtResource("4_olhkx")]
+position = Vector2(120, 280)
+
+[node name="frec29" parent="fgroup3" instance=ExtResource("4_olhkx")]
+position = Vector2(136, 280)
+
+[node name="frec30" parent="fgroup3" instance=ExtResource("4_olhkx")]
+position = Vector2(152, 280)
+
+[node name="fgroup4" type="Node2D" parent="."]
+
+[node name="frec31" parent="fgroup4" instance=ExtResource("4_olhkx")]
+position = Vector2(8, 264)
+
+[node name="frec32" parent="fgroup4" instance=ExtResource("4_olhkx")]
+position = Vector2(24, 264)
+
+[node name="frec33" parent="fgroup4" instance=ExtResource("4_olhkx")]
+position = Vector2(40, 264)
+
+[node name="frec34" parent="fgroup4" instance=ExtResource("4_olhkx")]
+position = Vector2(56, 264)
+
+[node name="frec35" parent="fgroup4" instance=ExtResource("4_olhkx")]
+position = Vector2(72, 264)
+
+[node name="frec36" parent="fgroup4" instance=ExtResource("4_olhkx")]
+position = Vector2(88, 264)
+
+[node name="frec37" parent="fgroup4" instance=ExtResource("4_olhkx")]
+position = Vector2(104, 264)
+
+[node name="frec38" parent="fgroup4" instance=ExtResource("4_olhkx")]
+position = Vector2(120, 264)
+
+[node name="frec39" parent="fgroup4" instance=ExtResource("4_olhkx")]
+position = Vector2(136, 264)
+
+[node name="frec40" parent="fgroup4" instance=ExtResource("4_olhkx")]
+position = Vector2(152, 264)
+
+[node name="fgroup5" type="Node2D" parent="."]
+
+[node name="frec41" parent="fgroup5" instance=ExtResource("4_olhkx")]
+position = Vector2(8, 248)
+
+[node name="frec42" parent="fgroup5" instance=ExtResource("4_olhkx")]
+position = Vector2(24, 248)
+
+[node name="frec43" parent="fgroup5" instance=ExtResource("4_olhkx")]
+position = Vector2(40, 248)
+
+[node name="frec44" parent="fgroup5" instance=ExtResource("4_olhkx")]
+position = Vector2(56, 248)
+
+[node name="frec45" parent="fgroup5" instance=ExtResource("4_olhkx")]
+position = Vector2(72, 248)
+
+[node name="frec46" parent="fgroup5" instance=ExtResource("4_olhkx")]
+position = Vector2(88, 248)
+
+[node name="frec47" parent="fgroup5" instance=ExtResource("4_olhkx")]
+position = Vector2(104, 248)
+
+[node name="frec48" parent="fgroup5" instance=ExtResource("4_olhkx")]
+position = Vector2(120, 248)
+
+[node name="frec49" parent="fgroup5" instance=ExtResource("4_olhkx")]
+position = Vector2(136, 248)
+
+[node name="frec50" parent="fgroup5" instance=ExtResource("4_olhkx")]
+position = Vector2(152, 248)
+
+[node name="fgroup6" type="Node2D" parent="."]
+
+[node name="frec51" parent="fgroup6" instance=ExtResource("4_olhkx")]
+position = Vector2(8, 232)
+
+[node name="frec52" parent="fgroup6" instance=ExtResource("4_olhkx")]
+position = Vector2(24, 232)
+
+[node name="frec53" parent="fgroup6" instance=ExtResource("4_olhkx")]
+position = Vector2(40, 232)
+
+[node name="frec54" parent="fgroup6" instance=ExtResource("4_olhkx")]
+position = Vector2(56, 232)
+
+[node name="frec55" parent="fgroup6" instance=ExtResource("4_olhkx")]
+position = Vector2(72, 232)
+
+[node name="frec56" parent="fgroup6" instance=ExtResource("4_olhkx")]
+position = Vector2(88, 232)
+
+[node name="frec57" parent="fgroup6" instance=ExtResource("4_olhkx")]
+position = Vector2(104, 232)
+
+[node name="frec58" parent="fgroup6" instance=ExtResource("4_olhkx")]
+position = Vector2(120, 232)
+
+[node name="frec59" parent="fgroup6" instance=ExtResource("4_olhkx")]
+position = Vector2(136, 232)
+
+[node name="frec60" parent="fgroup6" instance=ExtResource("4_olhkx")]
+position = Vector2(152, 232)
+
+[node name="fgroup7" type="Node2D" parent="."]
+
+[node name="frec61" parent="fgroup7" instance=ExtResource("4_olhkx")]
+position = Vector2(8, 216)
+
+[node name="frec62" parent="fgroup7" instance=ExtResource("4_olhkx")]
+position = Vector2(24, 216)
+
+[node name="frec63" parent="fgroup7" instance=ExtResource("4_olhkx")]
+position = Vector2(40, 216)
+
+[node name="frec64" parent="fgroup7" instance=ExtResource("4_olhkx")]
+position = Vector2(56, 216)
+
+[node name="frec65" parent="fgroup7" instance=ExtResource("4_olhkx")]
+position = Vector2(72, 216)
+
+[node name="frec66" parent="fgroup7" instance=ExtResource("4_olhkx")]
+position = Vector2(88, 216)
+
+[node name="frec67" parent="fgroup7" instance=ExtResource("4_olhkx")]
+position = Vector2(104, 216)
+
+[node name="frec68" parent="fgroup7" instance=ExtResource("4_olhkx")]
+position = Vector2(120, 216)
+
+[node name="frec69" parent="fgroup7" instance=ExtResource("4_olhkx")]
+position = Vector2(136, 216)
+
+[node name="frec70" parent="fgroup7" instance=ExtResource("4_olhkx")]
+position = Vector2(152, 216)
+
+[node name="fgroup8" type="Node2D" parent="."]
+
+[node name="frec71" parent="fgroup8" instance=ExtResource("4_olhkx")]
+position = Vector2(8, 200)
+
+[node name="frec72" parent="fgroup8" instance=ExtResource("4_olhkx")]
+position = Vector2(24, 200)
+
+[node name="frec73" parent="fgroup8" instance=ExtResource("4_olhkx")]
+position = Vector2(40, 200)
+
+[node name="frec74" parent="fgroup8" instance=ExtResource("4_olhkx")]
+position = Vector2(56, 200)
+
+[node name="frec75" parent="fgroup8" instance=ExtResource("4_olhkx")]
+position = Vector2(72, 200)
+
+[node name="frec76" parent="fgroup8" instance=ExtResource("4_olhkx")]
+position = Vector2(88, 200)
+
+[node name="frec77" parent="fgroup8" instance=ExtResource("4_olhkx")]
+position = Vector2(104, 200)
+
+[node name="frec78" parent="fgroup8" instance=ExtResource("4_olhkx")]
+position = Vector2(120, 200)
+
+[node name="frec79" parent="fgroup8" instance=ExtResource("4_olhkx")]
+position = Vector2(136, 200)
+
+[node name="frec80" parent="fgroup8" instance=ExtResource("4_olhkx")]
+position = Vector2(152, 200)
+
+[node name="fgroup9" type="Node2D" parent="."]
+
+[node name="frec81" parent="fgroup9" instance=ExtResource("4_olhkx")]
+position = Vector2(8, 184)
+
+[node name="frec82" parent="fgroup9" instance=ExtResource("4_olhkx")]
+position = Vector2(24, 184)
+
+[node name="frec83" parent="fgroup9" instance=ExtResource("4_olhkx")]
+position = Vector2(40, 184)
+
+[node name="frec84" parent="fgroup9" instance=ExtResource("4_olhkx")]
+position = Vector2(56, 184)
+
+[node name="frec85" parent="fgroup9" instance=ExtResource("4_olhkx")]
+position = Vector2(72, 184)
+
+[node name="frec86" parent="fgroup9" instance=ExtResource("4_olhkx")]
+position = Vector2(88, 184)
+
+[node name="frec87" parent="fgroup9" instance=ExtResource("4_olhkx")]
+position = Vector2(104, 184)
+
+[node name="frec88" parent="fgroup9" instance=ExtResource("4_olhkx")]
+position = Vector2(120, 184)
+
+[node name="frec89" parent="fgroup9" instance=ExtResource("4_olhkx")]
+position = Vector2(136, 184)
+
+[node name="frec90" parent="fgroup9" instance=ExtResource("4_olhkx")]
+position = Vector2(152, 184)
+
+[node name="fgroup10" type="Node2D" parent="."]
+
+[node name="frec91" parent="fgroup10" instance=ExtResource("4_olhkx")]
+position = Vector2(8, 168)
+
+[node name="frec92" parent="fgroup10" instance=ExtResource("4_olhkx")]
+position = Vector2(24, 168)
+
+[node name="frec93" parent="fgroup10" instance=ExtResource("4_olhkx")]
+position = Vector2(40, 168)
+
+[node name="frec94" parent="fgroup10" instance=ExtResource("4_olhkx")]
+position = Vector2(56, 168)
+
+[node name="frec95" parent="fgroup10" instance=ExtResource("4_olhkx")]
+position = Vector2(72, 168)
+
+[node name="frec96" parent="fgroup10" instance=ExtResource("4_olhkx")]
+position = Vector2(88, 168)
+
+[node name="frec97" parent="fgroup10" instance=ExtResource("4_olhkx")]
+position = Vector2(104, 168)
+
+[node name="frec98" parent="fgroup10" instance=ExtResource("4_olhkx")]
+position = Vector2(120, 168)
+
+[node name="frec99" parent="fgroup10" instance=ExtResource("4_olhkx")]
+position = Vector2(136, 168)
+
+[node name="frec100" parent="fgroup10" instance=ExtResource("4_olhkx")]
+position = Vector2(152, 168)
+
+[node name="fgroup11" type="Node2D" parent="."]
+
+[node name="frec101" parent="fgroup11" instance=ExtResource("4_olhkx")]
+position = Vector2(8, 152)
+
+[node name="frec102" parent="fgroup11" instance=ExtResource("4_olhkx")]
+position = Vector2(24, 152)
+
+[node name="frec103" parent="fgroup11" instance=ExtResource("4_olhkx")]
+position = Vector2(40, 152)
+
+[node name="frec104" parent="fgroup11" instance=ExtResource("4_olhkx")]
+position = Vector2(56, 152)
+
+[node name="frec105" parent="fgroup11" instance=ExtResource("4_olhkx")]
+position = Vector2(72, 152)
+
+[node name="frec106" parent="fgroup11" instance=ExtResource("4_olhkx")]
+position = Vector2(88, 152)
+
+[node name="frec107" parent="fgroup11" instance=ExtResource("4_olhkx")]
+position = Vector2(104, 152)
+
+[node name="frec108" parent="fgroup11" instance=ExtResource("4_olhkx")]
+position = Vector2(120, 152)
+
+[node name="frec109" parent="fgroup11" instance=ExtResource("4_olhkx")]
+position = Vector2(136, 152)
+
+[node name="frec110" parent="fgroup11" instance=ExtResource("4_olhkx")]
+position = Vector2(152, 152)
+
+[node name="fgroup12" type="Node2D" parent="."]
+
+[node name="frec111" parent="fgroup12" instance=ExtResource("4_olhkx")]
+position = Vector2(8, 136)
+
+[node name="frec112" parent="fgroup12" instance=ExtResource("4_olhkx")]
+position = Vector2(24, 136)
+
+[node name="frec113" parent="fgroup12" instance=ExtResource("4_olhkx")]
+position = Vector2(40, 136)
+
+[node name="frec114" parent="fgroup12" instance=ExtResource("4_olhkx")]
+position = Vector2(56, 136)
+
+[node name="frec115" parent="fgroup12" instance=ExtResource("4_olhkx")]
+position = Vector2(72, 136)
+
+[node name="frec116" parent="fgroup12" instance=ExtResource("4_olhkx")]
+position = Vector2(88, 136)
+
+[node name="frec117" parent="fgroup12" instance=ExtResource("4_olhkx")]
+position = Vector2(104, 136)
+
+[node name="frec118" parent="fgroup12" instance=ExtResource("4_olhkx")]
+position = Vector2(120, 136)
+
+[node name="frec119" parent="fgroup12" instance=ExtResource("4_olhkx")]
+position = Vector2(136, 136)
+
+[node name="frec120" parent="fgroup12" instance=ExtResource("4_olhkx")]
+position = Vector2(152, 136)
+
+[node name="fgroup13" type="Node2D" parent="."]
+
+[node name="frec121" parent="fgroup13" instance=ExtResource("4_olhkx")]
+position = Vector2(8, 120)
+
+[node name="frec122" parent="fgroup13" instance=ExtResource("4_olhkx")]
+position = Vector2(24, 120)
+
+[node name="frec123" parent="fgroup13" instance=ExtResource("4_olhkx")]
+position = Vector2(40, 120)
+
+[node name="frec124" parent="fgroup13" instance=ExtResource("4_olhkx")]
+position = Vector2(56, 120)
+
+[node name="frec125" parent="fgroup13" instance=ExtResource("4_olhkx")]
+position = Vector2(72, 120)
+
+[node name="frec126" parent="fgroup13" instance=ExtResource("4_olhkx")]
+position = Vector2(88, 120)
+
+[node name="frec127" parent="fgroup13" instance=ExtResource("4_olhkx")]
+position = Vector2(104, 120)
+
+[node name="frec128" parent="fgroup13" instance=ExtResource("4_olhkx")]
+position = Vector2(120, 120)
+
+[node name="frec129" parent="fgroup13" instance=ExtResource("4_olhkx")]
+position = Vector2(136, 120)
+
+[node name="frec130" parent="fgroup13" instance=ExtResource("4_olhkx")]
+position = Vector2(152, 120)
+
+[node name="fgroup14" type="Node2D" parent="."]
+
+[node name="frec131" parent="fgroup14" instance=ExtResource("4_olhkx")]
+position = Vector2(8, 104)
+
+[node name="frec132" parent="fgroup14" instance=ExtResource("4_olhkx")]
+position = Vector2(24, 104)
+
+[node name="frec133" parent="fgroup14" instance=ExtResource("4_olhkx")]
+position = Vector2(40, 104)
+
+[node name="frec134" parent="fgroup14" instance=ExtResource("4_olhkx")]
+position = Vector2(56, 104)
+
+[node name="frec135" parent="fgroup14" instance=ExtResource("4_olhkx")]
+position = Vector2(72, 104)
+
+[node name="frec136" parent="fgroup14" instance=ExtResource("4_olhkx")]
+position = Vector2(88, 104)
+
+[node name="frec137" parent="fgroup14" instance=ExtResource("4_olhkx")]
+position = Vector2(104, 104)
+
+[node name="frec138" parent="fgroup14" instance=ExtResource("4_olhkx")]
+position = Vector2(120, 104)
+
+[node name="frec139" parent="fgroup14" instance=ExtResource("4_olhkx")]
+position = Vector2(136, 104)
+
+[node name="frec140" parent="fgroup14" instance=ExtResource("4_olhkx")]
+position = Vector2(152, 104)
+
+[node name="fgroup15" type="Node2D" parent="."]
+
+[node name="frec141" parent="fgroup15" instance=ExtResource("4_olhkx")]
+position = Vector2(8, 88)
+
+[node name="frec142" parent="fgroup15" instance=ExtResource("4_olhkx")]
+position = Vector2(24, 88)
+
+[node name="frec143" parent="fgroup15" instance=ExtResource("4_olhkx")]
+position = Vector2(40, 88)
+
+[node name="frec144" parent="fgroup15" instance=ExtResource("4_olhkx")]
+position = Vector2(56, 88)
+
+[node name="frec145" parent="fgroup15" instance=ExtResource("4_olhkx")]
+position = Vector2(72, 88)
+
+[node name="frec146" parent="fgroup15" instance=ExtResource("4_olhkx")]
+position = Vector2(88, 88)
+
+[node name="frec147" parent="fgroup15" instance=ExtResource("4_olhkx")]
+position = Vector2(104, 88)
+
+[node name="frec148" parent="fgroup15" instance=ExtResource("4_olhkx")]
+position = Vector2(120, 88)
+
+[node name="frec149" parent="fgroup15" instance=ExtResource("4_olhkx")]
+position = Vector2(136, 88)
+
+[node name="frec150" parent="fgroup15" instance=ExtResource("4_olhkx")]
+position = Vector2(152, 88)
+
+[node name="fgroup16" type="Node2D" parent="."]
+
+[node name="frec151" parent="fgroup16" instance=ExtResource("4_olhkx")]
+position = Vector2(8, 72)
+
+[node name="frec152" parent="fgroup16" instance=ExtResource("4_olhkx")]
+position = Vector2(24, 72)
+
+[node name="frec153" parent="fgroup16" instance=ExtResource("4_olhkx")]
+position = Vector2(40, 72)
+
+[node name="frec154" parent="fgroup16" instance=ExtResource("4_olhkx")]
+position = Vector2(56, 72)
+
+[node name="frec155" parent="fgroup16" instance=ExtResource("4_olhkx")]
+position = Vector2(72, 72)
+
+[node name="frec156" parent="fgroup16" instance=ExtResource("4_olhkx")]
+position = Vector2(88, 72)
+
+[node name="frec157" parent="fgroup16" instance=ExtResource("4_olhkx")]
+position = Vector2(104, 72)
+
+[node name="frec158" parent="fgroup16" instance=ExtResource("4_olhkx")]
+position = Vector2(120, 72)
+
+[node name="frec159" parent="fgroup16" instance=ExtResource("4_olhkx")]
+position = Vector2(136, 72)
+
+[node name="frec160" parent="fgroup16" instance=ExtResource("4_olhkx")]
+position = Vector2(152, 72)
+
+[node name="fgroup17" type="Node2D" parent="."]
+
+[node name="frec161" parent="fgroup17" instance=ExtResource("4_olhkx")]
+position = Vector2(8, 56)
+
+[node name="frec162" parent="fgroup17" instance=ExtResource("4_olhkx")]
+position = Vector2(24, 56)
+
+[node name="frec163" parent="fgroup17" instance=ExtResource("4_olhkx")]
+position = Vector2(40, 56)
+
+[node name="frec164" parent="fgroup17" instance=ExtResource("4_olhkx")]
+position = Vector2(56, 56)
+
+[node name="frec165" parent="fgroup17" instance=ExtResource("4_olhkx")]
+position = Vector2(72, 56)
+
+[node name="frec166" parent="fgroup17" instance=ExtResource("4_olhkx")]
+position = Vector2(88, 56)
+
+[node name="frec167" parent="fgroup17" instance=ExtResource("4_olhkx")]
+position = Vector2(104, 56)
+
+[node name="frec168" parent="fgroup17" instance=ExtResource("4_olhkx")]
+position = Vector2(120, 56)
+
+[node name="frec169" parent="fgroup17" instance=ExtResource("4_olhkx")]
+position = Vector2(136, 56)
+
+[node name="frec170" parent="fgroup17" instance=ExtResource("4_olhkx")]
+position = Vector2(152, 56)
+
+[node name="fgroup18" type="Node2D" parent="."]
+
+[node name="frec171" parent="fgroup18" instance=ExtResource("4_olhkx")]
+position = Vector2(8, 40)
+
+[node name="frec172" parent="fgroup18" instance=ExtResource("4_olhkx")]
+position = Vector2(24, 40)
+
+[node name="frec173" parent="fgroup18" instance=ExtResource("4_olhkx")]
+position = Vector2(40, 40)
+
+[node name="frec174" parent="fgroup18" instance=ExtResource("4_olhkx")]
+position = Vector2(56, 40)
+
+[node name="frec175" parent="fgroup18" instance=ExtResource("4_olhkx")]
+position = Vector2(72, 40)
+
+[node name="frec176" parent="fgroup18" instance=ExtResource("4_olhkx")]
+position = Vector2(88, 40)
+
+[node name="frec177" parent="fgroup18" instance=ExtResource("4_olhkx")]
+position = Vector2(104, 40)
+
+[node name="frec178" parent="fgroup18" instance=ExtResource("4_olhkx")]
+position = Vector2(120, 40)
+
+[node name="frec179" parent="fgroup18" instance=ExtResource("4_olhkx")]
+position = Vector2(136, 40)
+
+[node name="frec180" parent="fgroup18" instance=ExtResource("4_olhkx")]
+position = Vector2(152, 40)
+
+[node name="fgroup19" type="Node2D" parent="."]
+
+[node name="frec181" parent="fgroup19" instance=ExtResource("4_olhkx")]
+position = Vector2(8, 24)
+
+[node name="frec182" parent="fgroup19" instance=ExtResource("4_olhkx")]
+position = Vector2(24, 24)
+
+[node name="frec183" parent="fgroup19" instance=ExtResource("4_olhkx")]
+position = Vector2(40, 24)
+
+[node name="frec184" parent="fgroup19" instance=ExtResource("4_olhkx")]
+position = Vector2(56, 24)
+
+[node name="frec185" parent="fgroup19" instance=ExtResource("4_olhkx")]
+position = Vector2(72, 24)
+
+[node name="frec186" parent="fgroup19" instance=ExtResource("4_olhkx")]
+position = Vector2(88, 24)
+
+[node name="frec187" parent="fgroup19" instance=ExtResource("4_olhkx")]
+position = Vector2(104, 24)
+
+[node name="frec188" parent="fgroup19" instance=ExtResource("4_olhkx")]
+position = Vector2(120, 24)
+
+[node name="frec189" parent="fgroup19" instance=ExtResource("4_olhkx")]
+position = Vector2(136, 24)
+
+[node name="frec190" parent="fgroup19" instance=ExtResource("4_olhkx")]
+position = Vector2(152, 24)
+
+[node name="fgroup20" type="Node2D" parent="."]
+
+[node name="frec191" parent="fgroup20" instance=ExtResource("4_olhkx")]
+position = Vector2(8, 8)
+
+[node name="frec192" parent="fgroup20" instance=ExtResource("4_olhkx")]
+position = Vector2(24, 8)
+
+[node name="frec193" parent="fgroup20" instance=ExtResource("4_olhkx")]
+position = Vector2(40, 8)
+
+[node name="frec194" parent="fgroup20" instance=ExtResource("4_olhkx")]
+position = Vector2(56, 8)
+
+[node name="frec195" parent="fgroup20" instance=ExtResource("4_olhkx")]
+position = Vector2(72, 8)
+
+[node name="frec196" parent="fgroup20" instance=ExtResource("4_olhkx")]
+position = Vector2(88, 8)
+
+[node name="frec197" parent="fgroup20" instance=ExtResource("4_olhkx")]
+position = Vector2(104, 8)
+
+[node name="frec198" parent="fgroup20" instance=ExtResource("4_olhkx")]
+position = Vector2(120, 8)
+
+[node name="frec199" parent="fgroup20" instance=ExtResource("4_olhkx")]
+position = Vector2(136, 8)
+
+[node name="frec200" parent="fgroup20" instance=ExtResource("4_olhkx")]
+position = Vector2(152, 8)
+
+[node name="timer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[node name="tempo" type="Timer" parent="."]
+wait_time = 2.5
+
+[node name="x_wall" type="Timer" parent="."]
+
+[node name="y_wall" type="Timer" parent="."]
+wait_time = 0.1
+
+[node name="z_wall" type="Timer" parent="."]
+wait_time = 0.1
+
+[node name="png" type="Sprite2D" parent="."]
+position = Vector2(200, 184)
+texture = ExtResource("13_x52ox")
+
+[connection signal="kein_i" from="." to="." method="_on_kein_i"]
+[connection signal="kote_i" from="." to="." method="_on_kote_i"]
+[connection signal="lane_i" from="." to="." method="_on_lane_i"]
+[connection signal="mane_i" from="." to="." method="_on_mane_i"]
+[connection signal="pause_i" from="." to="." method="_on_pause_i"]
+[connection signal="pause_s" from="." to="." method="_on_pause_s"]
+[connection signal="rake_i" from="." to="." method="_on_rake_i"]
+[connection signal="sake_i" from="." to="." method="_on_sake_i"]
+[connection signal="super_sound_m" from="." to="." method="_on_super_sound_m"]
+[connection signal="super_sound_m" from="." to="hi_score" method="_on_screen_super_sound_m"]
+[connection signal="super_sound_s" from="." to="." method="_on_super_sound_s"]
+[connection signal="super_sound_s" from="." to="hi_score" method="_on_screen_super_sound_s"]
+[connection signal="tatuso_i" from="." to="." method="_on_tatuso_i"]
+[connection signal="points_qso" from="score" to="quick" method="_on_score_points_qso"]
+[connection signal="always_turf" from="bad_signal" to="." method="_on_bad_signal_always_turf"]
+[connection signal="negative_take" from="bad_signal" to="." method="_on_bad_signal_negative_take"]
+[connection signal="negative_turf" from="bad_signal" to="." method="_on_bad_signal_negative_turf"]
+[connection signal="positive_take" from="bad_signal" to="." method="_on_bad_signal_positive_take"]
+[connection signal="positive_turf" from="bad_signal" to="." method="_on_bad_signal_positive_turf"]
+[connection signal="signal_turf" from="bad_signal" to="." method="_on_bad_signal_signal_turf"]
+[connection signal="area_entered" from="fgroup/frec" to="bad_signal" method="_on_frec_area_entered"]
+[connection signal="area_exited" from="fgroup/frec" to="bad_signal" method="_on_frec_area_exited"]
+[connection signal="area_exited" from="fgroup/frec4" to="bad_signal" method="_on_frec_4_area_exited"]
+[connection signal="area_entered" from="fgroup/frec10" to="bad_signal" method="_on_frec_10_area_entered"]
+[connection signal="area_exited" from="fgroup/frec10" to="bad_signal" method="_on_frec_10_area_exited"]
+[connection signal="area_entered" from="fgroup2/frec11" to="bad_signal" method="_on_frec_11_area_entered"]
+[connection signal="area_exited" from="fgroup2/frec11" to="bad_signal" method="_on_frec_11_area_exited"]
+[connection signal="area_entered" from="fgroup2/frec20" to="bad_signal" method="_on_frec_20_area_entered"]
+[connection signal="area_exited" from="fgroup2/frec20" to="bad_signal" method="_on_frec_20_area_exited"]
+[connection signal="area_entered" from="fgroup3/frec21" to="bad_signal" method="_on_frec_21_area_entered"]
+[connection signal="area_exited" from="fgroup3/frec21" to="bad_signal" method="_on_frec_21_area_exited"]
+[connection signal="area_entered" from="fgroup3/frec30" to="bad_signal" method="_on_frec_30_area_entered"]
+[connection signal="area_exited" from="fgroup3/frec30" to="bad_signal" method="_on_frec_30_area_exited"]
+[connection signal="area_entered" from="fgroup4/frec31" to="bad_signal" method="_on_frec_31_area_entered"]
+[connection signal="area_exited" from="fgroup4/frec31" to="bad_signal" method="_on_frec_31_area_exited"]
+[connection signal="area_entered" from="fgroup4/frec40" to="bad_signal" method="_on_frec_40_area_entered"]
+[connection signal="area_exited" from="fgroup4/frec40" to="bad_signal" method="_on_frec_40_area_exited"]
+[connection signal="area_entered" from="fgroup5/frec41" to="bad_signal" method="_on_frec_41_area_entered"]
+[connection signal="area_exited" from="fgroup5/frec41" to="bad_signal" method="_on_frec_41_area_exited"]
+[connection signal="area_entered" from="fgroup5/frec50" to="bad_signal" method="_on_frec_50_area_entered"]
+[connection signal="area_exited" from="fgroup5/frec50" to="bad_signal" method="_on_frec_50_area_exited"]
+[connection signal="area_entered" from="fgroup6/frec51" to="bad_signal" method="_on_frec_51_area_entered"]
+[connection signal="area_exited" from="fgroup6/frec51" to="bad_signal" method="_on_frec_51_area_exited"]
+[connection signal="area_entered" from="fgroup6/frec60" to="bad_signal" method="_on_frec_60_area_entered"]
+[connection signal="area_exited" from="fgroup6/frec60" to="bad_signal" method="_on_frec_60_area_exited"]
+[connection signal="area_entered" from="fgroup7/frec61" to="bad_signal" method="_on_frec_61_area_entered"]
+[connection signal="area_exited" from="fgroup7/frec61" to="bad_signal" method="_on_frec_61_area_exited"]
+[connection signal="area_entered" from="fgroup7/frec70" to="bad_signal" method="_on_frec_70_area_entered"]
+[connection signal="area_exited" from="fgroup7/frec70" to="bad_signal" method="_on_frec_70_area_exited"]
+[connection signal="area_entered" from="fgroup8/frec71" to="bad_signal" method="_on_frec_71_area_entered"]
+[connection signal="area_exited" from="fgroup8/frec71" to="bad_signal" method="_on_frec_71_area_exited"]
+[connection signal="area_entered" from="fgroup8/frec80" to="bad_signal" method="_on_frec_80_area_entered"]
+[connection signal="area_exited" from="fgroup8/frec80" to="bad_signal" method="_on_frec_80_area_exited"]
+[connection signal="area_entered" from="fgroup9/frec81" to="bad_signal" method="_on_frec_81_area_entered"]
+[connection signal="area_exited" from="fgroup9/frec81" to="bad_signal" method="_on_frec_81_area_exited"]
+[connection signal="area_entered" from="fgroup9/frec90" to="bad_signal" method="_on_frec_90_area_entered"]
+[connection signal="area_exited" from="fgroup9/frec90" to="bad_signal" method="_on_frec_90_area_exited"]
+[connection signal="area_entered" from="fgroup10/frec91" to="bad_signal" method="_on_frec_91_area_entered"]
+[connection signal="area_exited" from="fgroup10/frec91" to="bad_signal" method="_on_frec_91_area_exited"]
+[connection signal="area_entered" from="fgroup10/frec100" to="bad_signal" method="_on_frec_100_area_entered"]
+[connection signal="area_exited" from="fgroup10/frec100" to="bad_signal" method="_on_frec_100_area_exited"]
+[connection signal="area_entered" from="fgroup11/frec101" to="bad_signal" method="_on_frec_101_area_entered"]
+[connection signal="area_exited" from="fgroup11/frec101" to="bad_signal" method="_on_frec_101_area_exited"]
+[connection signal="area_entered" from="fgroup11/frec110" to="bad_signal" method="_on_frec_110_area_entered"]
+[connection signal="area_exited" from="fgroup11/frec110" to="bad_signal" method="_on_frec_110_area_exited"]
+[connection signal="area_entered" from="fgroup12/frec111" to="bad_signal" method="_on_frec_111_area_entered"]
+[connection signal="area_exited" from="fgroup12/frec111" to="bad_signal" method="_on_frec_111_area_exited"]
+[connection signal="area_entered" from="fgroup12/frec120" to="bad_signal" method="_on_frec_120_area_entered"]
+[connection signal="area_exited" from="fgroup12/frec120" to="bad_signal" method="_on_frec_120_area_exited"]
+[connection signal="area_entered" from="fgroup13/frec121" to="bad_signal" method="_on_frec_121_area_entered"]
+[connection signal="area_exited" from="fgroup13/frec121" to="bad_signal" method="_on_frec_121_area_exited"]
+[connection signal="area_entered" from="fgroup13/frec130" to="bad_signal" method="_on_frec_130_area_entered"]
+[connection signal="area_exited" from="fgroup13/frec130" to="bad_signal" method="_on_frec_130_area_exited"]
+[connection signal="area_entered" from="fgroup14/frec131" to="bad_signal" method="_on_frec_131_area_entered"]
+[connection signal="area_exited" from="fgroup14/frec131" to="bad_signal" method="_on_frec_131_area_exited"]
+[connection signal="area_entered" from="fgroup14/frec140" to="bad_signal" method="_on_frec_140_area_entered"]
+[connection signal="area_exited" from="fgroup14/frec140" to="bad_signal" method="_on_frec_140_area_exited"]
+[connection signal="area_entered" from="fgroup15/frec141" to="bad_signal" method="_on_frec_141_area_entered"]
+[connection signal="area_exited" from="fgroup15/frec141" to="bad_signal" method="_on_frec_141_area_exited"]
+[connection signal="area_entered" from="fgroup15/frec150" to="bad_signal" method="_on_frec_150_area_entered"]
+[connection signal="area_exited" from="fgroup15/frec150" to="bad_signal" method="_on_frec_150_area_exited"]
+[connection signal="area_entered" from="fgroup16/frec151" to="bad_signal" method="_on_frec_151_area_entered"]
+[connection signal="area_exited" from="fgroup16/frec151" to="bad_signal" method="_on_frec_151_area_exited"]
+[connection signal="area_entered" from="fgroup16/frec160" to="bad_signal" method="_on_frec_160_area_entered"]
+[connection signal="area_exited" from="fgroup16/frec160" to="bad_signal" method="_on_frec_160_area_exited"]
+[connection signal="area_entered" from="fgroup17/frec161" to="bad_signal" method="_on_frec_161_area_entered"]
+[connection signal="area_exited" from="fgroup17/frec161" to="bad_signal" method="_on_frec_161_area_exited"]
+[connection signal="area_entered" from="fgroup17/frec170" to="bad_signal" method="_on_frec_170_area_entered"]
+[connection signal="area_exited" from="fgroup17/frec170" to="bad_signal" method="_on_frec_170_area_exited"]
+[connection signal="area_entered" from="fgroup18/frec171" to="bad_signal" method="_on_frec_171_area_entered"]
+[connection signal="area_exited" from="fgroup18/frec171" to="bad_signal" method="_on_frec_171_area_exited"]
+[connection signal="area_entered" from="fgroup18/frec180" to="bad_signal" method="_on_frec_180_area_entered"]
+[connection signal="area_exited" from="fgroup18/frec180" to="bad_signal" method="_on_frec_180_area_exited"]
+[connection signal="area_entered" from="fgroup19/frec181" to="bad_signal" method="_on_frec_181_area_entered"]
+[connection signal="area_exited" from="fgroup19/frec181" to="bad_signal" method="_on_frec_181_area_exited"]
+[connection signal="area_entered" from="fgroup19/frec190" to="bad_signal" method="_on_frec_190_area_entered"]
+[connection signal="area_exited" from="fgroup19/frec190" to="bad_signal" method="_on_frec_190_area_exited"]
+[connection signal="area_entered" from="fgroup20/frec191" to="bad_signal" method="_on_frec_191_area_entered"]
+[connection signal="area_exited" from="fgroup20/frec191" to="bad_signal" method="_on_frec_191_area_exited"]
+[connection signal="area_entered" from="fgroup20/frec200" to="bad_signal" method="_on_frec_200_area_entered"]
+[connection signal="area_exited" from="fgroup20/frec200" to="bad_signal" method="_on_frec_200_area_exited"]
+[connection signal="timeout" from="timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="tempo" to="." method="_on_tempo_timeout"]
+[connection signal="timeout" from="x_wall" to="." method="_on_x_wall_timeout"]
+[connection signal="timeout" from="y_wall" to="." method="_on_y_wall_timeout"]
+[connection signal="timeout" from="z_wall" to="." method="_on_z_wall_timeout"]

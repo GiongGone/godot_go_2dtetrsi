@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=3 uid="uid://du5sabevyon6m"]
+
+[ext_resource type="Script" path="res://block.gd" id="1_cbvoj"]
+[ext_resource type="AudioStream" uid="uid://codusu7abmrfb" path="res://dtmf_7.wav" id="2_vvn6u"]
+[ext_resource type="PackedScene" uid="uid://dqx7l5hocnjpv" path="res://bad_signal.tscn" id="3_pjqt7"]
+[ext_resource type="AudioStream" uid="uid://ctt8k70hg5js6" path="res://peck50.wav" id="3_xmp1i"]
+
+[node name="block" type="Area2D"]
+process_mode = 1
+script = ExtResource("1_cbvoj")
+metadata/_edit_group_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-7, -7, 7, -7, 7, 7)
+
+[node name="click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_vvn6u")
+volume_db = -2.14
+pitch_scale = 0.56
+mix_target = 2
+max_polyphony = 3
+
+[node name="clarity_automatic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_xmp1i")
+volume_db = -3.586
+pitch_scale = 0.55
+mix_target = 2
+max_polyphony = 26
+
+[node name="bad_signal" parent="." instance=ExtResource("3_pjqt7")]
+
+[node name="move" type="Timer" parent="."]
+wait_time = 0.125
+autostart = true
+
+[node name="easy" type="Timer" parent="."]
+wait_time = 0.333
+
+[connection signal="signal_work" from="." to="." method="_on_signal_work"]
+[connection signal="sound_off" from="." to="." method="_on_sound_off"]
+[connection signal="sound_on" from="." to="." method="_on_sound_on"]
+[connection signal="y_turf" from="." to="." method="_on_y_turf"]
+[connection signal="z_turf" from="." to="." method="_on_z_turf"]
+[connection signal="z_turf" from="." to="bad_signal" method="_on_block_z_turf"]
+[connection signal="signal_turf" from="bad_signal" to="." method="_on_bad_signal_signal_turf"]
+[connection signal="timeout" from="move" to="." method="_on_move_timeout"]

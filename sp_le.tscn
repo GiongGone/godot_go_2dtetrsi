@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://i1mp3x0ahtin"]
+
+[ext_resource type="Script" path="res://speed.gd" id="1_tmwk1"]
+[ext_resource type="Script" path="res://level.gd" id="2_ynh15"]
+
+[node name="sp_le" type="Node2D"]
+
+[node name="speed" type="Node2D" parent="."]
+script = ExtResource("1_tmwk1")
+
+[node name="level" type="Node2D" parent="."]
+script = ExtResource("2_ynh15")

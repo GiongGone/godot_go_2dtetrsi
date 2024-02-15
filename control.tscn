@@ -1,0 +1,96 @@
+[gd_scene load_steps=20 format=3 uid="uid://bynmnhp1u477y"]
+
+[ext_resource type="Script" path="res://control.gd" id="1_ti06h"]
+[ext_resource type="Script" path="res://digital/spa.gd" id="3_8f6bm"]
+[ext_resource type="Script" path="res://digital/spb.gd" id="4_00vov"]
+[ext_resource type="Script" path="res://digital/lea.gd" id="5_vfkg0"]
+[ext_resource type="Script" path="res://digital/leb.gd" id="6_18mqb"]
+[ext_resource type="Script" path="res://digital/asp.gd" id="7_ou1om"]
+[ext_resource type="Script" path="res://digital/bsp.gd" id="8_asi84"]
+[ext_resource type="Script" path="res://digital/csp.gd" id="9_8rjho"]
+[ext_resource type="Script" path="res://digital/dsp.gd" id="10_05u1s"]
+[ext_resource type="Script" path="res://digital/esp.gd" id="11_jq60e"]
+[ext_resource type="Script" path="res://digital/fsp.gd" id="12_offu4"]
+[ext_resource type="Script" path="res://digital/gsp.gd" id="13_co13y"]
+[ext_resource type="Script" path="res://digital/ale.gd" id="14_fick0"]
+[ext_resource type="Script" path="res://digital/ble.gd" id="15_qnnjk"]
+[ext_resource type="Script" path="res://digital/cle.gd" id="16_3f12m"]
+[ext_resource type="Script" path="res://digital/dle.gd" id="17_kc0tj"]
+[ext_resource type="Script" path="res://digital/ele.gd" id="18_xl2fn"]
+[ext_resource type="Script" path="res://digital/fle.gd" id="19_nfkin"]
+[ext_resource type="Script" path="res://digital/gle.gd" id="20_rkl1f"]
+
+[node name="control" type="Node2D"]
+script = ExtResource("1_ti06h")
+
+[node name="sp_one" type="Node2D" parent="."]
+
+[node name="spa" type="Node2D" parent="sp_one"]
+script = ExtResource("3_8f6bm")
+
+[node name="spb" type="Node2D" parent="sp_one"]
+script = ExtResource("4_00vov")
+
+[node name="le_one" type="Node2D" parent="."]
+
+[node name="lea" type="Node2D" parent="le_one"]
+script = ExtResource("5_vfkg0")
+
+[node name="leb" type="Node2D" parent="le_one"]
+script = ExtResource("6_18mqb")
+
+[node name="sp_zero" type="Node2D" parent="."]
+
+[node name="asp" type="Node2D" parent="sp_zero"]
+script = ExtResource("7_ou1om")
+
+[node name="bsp" type="Node2D" parent="sp_zero"]
+script = ExtResource("8_asi84")
+
+[node name="csp" type="Node2D" parent="sp_zero"]
+script = ExtResource("9_8rjho")
+
+[node name="dsp" type="Node2D" parent="sp_zero"]
+script = ExtResource("10_05u1s")
+
+[node name="esp" type="Node2D" parent="sp_zero"]
+script = ExtResource("11_jq60e")
+
+[node name="fsp" type="Node2D" parent="sp_zero"]
+script = ExtResource("12_offu4")
+
+[node name="gsp" type="Node2D" parent="sp_zero"]
+script = ExtResource("13_co13y")
+
+[node name="le_zero" type="Node2D" parent="."]
+
+[node name="ale" type="Node2D" parent="le_zero"]
+script = ExtResource("14_fick0")
+
+[node name="ble" type="Node2D" parent="le_zero"]
+script = ExtResource("15_qnnjk")
+
+[node name="cle" type="Node2D" parent="le_zero"]
+script = ExtResource("16_3f12m")
+
+[node name="dle" type="Node2D" parent="le_zero"]
+script = ExtResource("17_kc0tj")
+
+[node name="ele" type="Node2D" parent="le_zero"]
+script = ExtResource("18_xl2fn")
+
+[node name="fle" type="Node2D" parent="le_zero"]
+script = ExtResource("19_nfkin")
+
+[node name="gle" type="Node2D" parent="le_zero"]
+script = ExtResource("20_rkl1f")
+
+[node name="stall" type="Timer" parent="."]
+wait_time = 0.666
+
+[node name="collect" type="Timer" parent="."]
+wait_time = 0.333
+
+[connection signal="ready" from="stall" to="." method="_on_stall_ready"]
+[connection signal="timeout" from="stall" to="." method="_on_stall_timeout"]
+[connection signal="timeout" from="collect" to="." method="_on_collect_timeout"]

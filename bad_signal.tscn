@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqx7l5hocnjpv"]
+
+[ext_resource type="Script" path="res://bad_signal.gd" id="1_rh8w3"]
+
+[node name="bad_signal" type="Node"]
+script = ExtResource("1_rh8w3")
+
+[connection signal="always_turf" from="." to="." method="_on_always_turf"]

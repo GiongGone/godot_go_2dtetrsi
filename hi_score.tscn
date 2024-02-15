@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://tcfjs6rh6yew"]
+
+[ext_resource type="Script" path="res://hi_score.gd" id="1_6pt6c"]
+[ext_resource type="Script" path="res://hi.gd" id="1_rls6m"]
+[ext_resource type="Script" path="res://score_i.gd" id="2_03odx"]
+[ext_resource type="Script" path="res://sound.gd" id="3_g28hw"]
+
+[node name="hi_score" type="Node2D"]
+script = ExtResource("1_6pt6c")
+
+[node name="hi" type="Node2D" parent="."]
+script = ExtResource("1_rls6m")
+
+[node name="score_i" type="Node2D" parent="."]
+script = ExtResource("2_03odx")
+
+[node name="sound" type="Node2D" parent="."]
+script = ExtResource("3_g28hw")
+
+[node name="brock" type="Timer" parent="."]
+wait_time = 0.666
+
+[node name="b_rock" type="Timer" parent="."]
+wait_time = 0.333
+
+[connection signal="ready" from="brock" to="." method="_on_brock_ready"]
+[connection signal="timeout" from="brock" to="." method="_on_brock_timeout"]
+[connection signal="timeout" from="b_rock" to="." method="_on_b_rock_timeout"]

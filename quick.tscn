@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://b0nrtdlmxb4ou"]
+
+[ext_resource type="Script" path="res://a.gd" id="1_ku6tj"]
+[ext_resource type="Script" path="res://quick.gd" id="1_rb6sc"]
+[ext_resource type="Script" path="res://b.gd" id="2_b4hvi"]
+[ext_resource type="Script" path="res://c.gd" id="3_wui7y"]
+[ext_resource type="Script" path="res://d.gd" id="4_xkogf"]
+
+[node name="quick" type="Node2D"]
+script = ExtResource("1_rb6sc")
+
+[node name="a" type="Node2D" parent="."]
+script = ExtResource("1_ku6tj")
+
+[node name="b" type="Node2D" parent="."]
+script = ExtResource("2_b4hvi")
+
+[node name="c" type="Node2D" parent="."]
+script = ExtResource("3_wui7y")
+
+[node name="d" type="Node2D" parent="."]
+script = ExtResource("4_xkogf")
+
+[node name="q_si" type="Timer" parent="."]
+wait_time = 0.333
+
+[connection signal="timeout" from="q_si" to="." method="_on_q_si_timeout"]
